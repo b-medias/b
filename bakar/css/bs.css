@@ -1,0 +1,1214 @@
+@charset "utf-8";
+.zoom:hover{
+	font-size:1.5em;
+	position:relative;
+	margin:-3px;
+}
+
+.b-link{
+	color:#999;
+	text-decoration:none;
+	cursor:pointer;
+	
+	-webkit-transition:all 0.5s ease;
+	-khtml-transition:all 0.5s ease;
+	-moz-transition:all 0.5s ease;
+	-ms-transition:all 0.5s ease;
+	-o-transition:all 0.5s ease;
+	transition:all 0.5s ease;
+}
+.b-link.active,
+.b-link:hover{
+	color:#0CF;
+	text-decoration:none;
+}
+
+/**
+*	LOADING
+*/
+.b-loading > p{
+	text-align: center;
+}
+.b-loading > .container-spinner{
+	width: 80px;
+	height: 80px;
+	margin: auto;
+}
+.b-loading > .container-spinner > .spinner{
+	top: 40px;
+	left: 40px;
+}
+
+/**
+*	LIGHTBOX
+*/
+.b-lightbox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: auto;
+	display: none;
+}
+.b-lightbox{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	filter: alpha(opacity=90);
+
+	-webkit-opacity: 0.9;
+	-khtml-opacity: 0.9;
+	-moz-opacity: 0.9;
+	-ms-opacity: 0.9;
+	-o-opacity: 0.9;
+	opacity: 0.9;
+}
+.b-lightbox.no-alpha{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+
+	-webkit-opacity: 1;
+	-khtml-opacity: 1;
+	-moz-opacity: 1;
+	-ms-opacity: 1;
+	-o-opacity: 1;
+	opacity: 1;
+}
+
+/**
+*	B-WINDOW
+*	B-ALERT
+*/
+.b-window,
+.b-window > .footer,
+.b-window > .header,
+.b-window > .header > .b-close,
+.b-window > .header > .b-refresh,
+.b-window > .header > .b-reload,
+.b-window > .header > .b-refresh,
+.b-window > .header > .b-compress,
+.b-window > .header > .b-expand,
+.b-window > .header > .b-restore,
+.b-window > .header > .b-save{
+	display: none;
+}
+
+.b-alert > .header,
+.b-alert > .body,
+.b-alert > .footer,
+.b-window > .header,
+.b-window > .body,
+.b-window > .footer{
+	background-image: -moz-linear-gradient(top , rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -webkit-gradient(
+						linear,
+						top,
+						color-stop(0%, rgb(210,147,179)),
+						color-stop(100%, rgb(252,177,215)),
+					);
+	background-image: -webkit-linear-gradient(top , rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -o-linear-gradient(top , rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -ms-linear-gradient(top , rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: linear-gradient(top , rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.2));
+	
+	-webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	-khtml-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);	
+	-moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);	
+	-ms-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);	
+	-o-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);	
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);		
+}
+
+.b-alert,
+.b-alert > .footer,
+.b-alert > .header,
+.b-alert > .header > .b-title,
+.b-window,
+.b-window > .footer,
+.b-window > .header,
+.b-window > .header > .b-title{
+	overflow: hidden;
+}
+
+.b-alert,
+.b-alert > .footer,
+.b-alert > .header,
+.b-window,
+.b-window > .footer,
+.b-window > .header{
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.b-alert > .footer,
+.b-alert > .header,
+.b-alert > .header > .b-title,
+.b-window > .footer,
+.b-window > .header,
+.b-window > .header > .b-title{
+	margin-bottom: 0;
+	margin-top: 0;
+	line-height: 30px;
+}
+
+.b-alert > .footer,
+.b-alert > .header,
+.b-window > .footer,
+.b-window > .header{
+	padding: 5px;
+	padding-top: 0;
+	padding-bottom: 0;	
+	min-height: 30px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+
+.b-window{
+	background: rgb(204,204,204);
+	background: rgba(0, 0, 0, 0.5);
+
+}
+.b-alert,
+.b-window{
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;	
+}
+
+.b-window{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.b-window > .body{
+	font-size: 0.85em;
+	color: white;
+	background: rgb(150,150,150);
+	background: rgba(255,255,255,0.05);
+
+	-webkit-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-khtml-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-moz-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-ms-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-o-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+.b-alert > .body > *,
+.b-window > .body > *{
+	padding:5px;
+}
+
+.b-alert > .footer,
+.b-window > .footer{
+	-webkit-border-radius: 0 0 5px 5px;
+	-khtml-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-ms-border-radius: 0 0 5px 5px;
+	-o-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+}
+
+.b-alert > .header,
+.b-window > .header{
+	-webkit-border-radius: 5px 5px 0 0;
+	-khtml-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-ms-border-radius: 5px 5px 0 0;
+	-o-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+
+.b-alert > .header > .b-title,
+.b-window > .header > .b-title{
+	height: auto;
+	width: auto;
+	font-size: 1em;
+}
+
+
+.b-window > .header > .b-close,
+.b-window > .header > .b-refresh,
+.b-window > .header > .b-restruct,
+.b-window > .header > .b-reload,
+.b-window > .header > .b-refresh,
+.b-window > .header > .b-compress,
+.b-window > .header > .b-expand,
+.b-window > .header > .b-restore,
+.b-window > .header > .b-restyle,
+.b-window > .header > .b-save{	
+	float: right;
+	height: 30px;
+	width: 30px;
+	border: none;
+	background: none!important;
+	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=70);
+
+	-webkit-opacity: 0.7;
+	-khtml-opacity: 0.7;
+	-moz-opacity: 0.7;
+	-ms-opacity: 0.7;
+	-o-opacity: 0.7;
+	opacity: 0.7;
+	
+	-webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	-khtml-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	-moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	-ms-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	-o-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	
+	-webkit-transition: all 0.3s ease;
+	-khtml-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition:all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.b-window > .header > .b-close:hover,
+.b-window > .header > .b-refresh:hover,
+.b-window > .header > .b-restruct:hover,
+.b-window > .header > .b-reload:hover,
+.b-window > .header > .b-refresh:hover,
+.b-window > .header > .b-compress:hover,
+.b-window > .header > .b-expand:hover,
+.b-window > .header > .b-restore:hover,
+.b-window > .header > .b-restyle:hover,
+.b-window > .header > .b-save:hover{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+
+	-webkit-opacity: 1;
+	-khtml-opacity: 1;
+	-moz-opacity: 1;
+	-ms-opacity: 1;
+	-o-opacity: 1;
+	opacity: 1;
+}
+
+.b-lightbox.iphone,
+.b-window > .header.iphone,
+.b-window > .header > .b-close.iphone,
+.b-window > .header > .b-refresh.iphone,
+.b-window > .header > .b-restruct.iphone,
+.b-window > .header > .b-reload.iphone,
+.b-window > .header > .b-refresh.iphone,
+.b-window > .header > .b-compress.iphone,
+.b-window > .header > .b-expand.iphone,
+.b-window > .header > .b-restore.iphone,
+.b-window > .header > .b-restyle.iphone,
+.b-window > .header > .b-save.iphone,
+.b-window > .footer.iphone,
+.b-window > .body.iphone,
+
+.b-window.iphone > .header,
+.b-window.iphone > .header > .b-close,
+.b-window.iphone > .header > .b-refresh,
+.b-window.iphone > .header > .b-restruct,
+.b-window.iphone > .header > .b-reload,
+.b-window.iphone > .header > .b-refresh,
+.b-window.iphone > .header > .b-compress,
+.b-window.iphone > .header > .b-expand,
+.b-window.iphone > .header > .b-restore,
+.b-window.iphone > .header > .b-restyle,
+.b-window.iphone > .header > .b-save,
+.b-window.iphone > .footer,
+.b-window.iphone > .body.color{
+	background:url("../img/bg-content.jpg") repeat;
+}
+
+.b-lightbox.alphagray,
+.b-window > .header.alphagray,
+.b-window > .header > .b-close.alphagray,
+.b-window > .header > .b-refresh.alphagray,
+.b-window > .header > .b-restruct.alphagray,
+.b-window > .header > .b-reload.alphagray,
+.b-window > .header > .b-refresh.alphagray,
+.b-window > .header > .b-compress.alphagray,
+.b-window > .header > .b-expand.alphagray,
+.b-window > .header > .b-restore.alphagray,
+.b-window > .header > .b-restyle.alphagray,
+.b-window > .header > .b-save.alphagray,
+.b-window > .footer.alphagray,
+.b-window > .body.alphagray,
+
+.b-window.alphagray > .header,
+.b-window.alphagray > .header > .b-close,
+.b-window.alphagray > .header > .b-refresh,
+.b-window.alphagray > .header > .b-restruct,
+.b-window.alphagray > .header > .b-reload,
+.b-window.alphagray > .header > .b-refresh,
+.b-window.alphagray > .header > .b-compress,
+.b-window.alphagray > .header > .b-expand,
+.b-window.alphagray > .header > .b-restore,
+.b-window.alphagray > .header > .b-restyle,
+.b-window.alphagray > .header > .b-save,
+.b-window.alphagray > .footer,
+.b-window.alphagray > .body.color{
+	color:#111;
+	background-color: rgb(150,150,150);
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.b-lightbox.success,
+.b-window > .header.success,
+.b-window > .header > .b-close.success,
+.b-window > .header > .b-refresh.success,
+.b-window > .header > .b-restruct.success,
+.b-window > .header > .b-reload.success,
+.b-window > .header > .b-refresh.success,
+.b-window > .header > .b-compress.success,
+.b-window > .header > .b-expand.success,
+.b-window > .header > .b-restore.success,
+.b-window > .header > .b-restyle.success,
+.b-window > .header > .b-save.success,
+.b-window > .footer.success,
+.b-window > .body.success,
+
+.b-window.success > .header,
+.b-window.success > .header > .b-close,
+.b-window.success > .header > .b-refresh,
+.b-window.success > .header > .b-restruct,
+.b-window.success > .header > .b-reload,
+.b-window.success > .header > .b-refresh,
+.b-window.success > .header > .b-compress,
+.b-window.success > .header > .b-expand,
+.b-window.success > .header > .b-restore,
+.b-window.success > .header > .b-restyle,
+.b-window.success > .header > .b-save,
+.b-window.success > .footer,
+.b-window.success > .body.color{
+	background-color: #658005;
+    color: #3D0800;  	
+}
+.b-window > .body.success,
+.b-window.success > .body.color,
+.b-window.success > .body.success{
+	background:url("../img/bg-content.jpg") repeat;
+	color:white;
+}
+
+.b-lightbox.error,
+.b-window > .header.error,
+.b-window > .header > .b-close.error,
+.b-window > .header > .b-refresh.error,
+.b-window > .header > .b-restruct.error,
+.b-window > .header > .b-reload.error,
+.b-window > .header > .b-refresh.error,
+.b-window > .header > .b-compress.error,
+.b-window > .header > .b-expand.error,
+.b-window > .header > .b-restore.error,
+.b-window > .header > .b-restyle.error,
+.b-window > .header > .b-save.error,
+.b-window > .footer.error,
+.b-window > .body.error,
+
+.b-window.error > .header,
+.b-window.error > .header > .b-close,
+.b-window.error > .header > .b-refresh,
+.b-window.error > .header > .b-restruct,
+.b-window.error > .header > .b-reload,
+.b-window.error > .header > .b-refresh,
+.b-window.error > .header > .b-compress,
+.b-window.error > .header > .b-expand,
+.b-window.error > .header > .b-restore,
+.b-window.error > .header > .b-restyle,
+.b-window.error > .header > .b-save,
+.b-window.error > .footer,
+.b-window.error > .body.color{
+	background-color: #B52E19;
+    color: #3D0800;  	
+}
+.b-window > .body.error,
+.b-window.error > .body.color,
+.b-window.error > .body.error{
+	background:url("../img/bg-content.jpg") repeat;
+	color:white;
+}
+
+.b-lightbox.gray,
+.b-window > .header.gray,
+.b-window > .header > .b-close.gray,
+.b-window > .header > .b-refresh.gray,
+.b-window > .header > .b-restruct.gray,
+.b-window > .header > .b-reload.gray,
+.b-window > .header > .b-refresh.gray,
+.b-window > .header > .b-compress.gray,
+.b-window > .header > .b-expand.gray,
+.b-window > .header > .b-restore.gray,
+.b-window > .header > .b-restyle.gray,
+.b-window > .header > .b-save.gray,
+.b-window > .footer.gray,
+.b-window > .body.gray,
+
+.b-window.gray > .header,
+.b-window.gray > .header > .b-close,
+.b-window.gray > .header > .b-refresh,
+.b-window.gray > .header > .b-restruct,
+.b-window.gray > .header > .b-reload,
+.b-window.gray > .header > .b-refresh,
+.b-window.gray > .header > .b-compress,
+.b-window.gray > .header > .b-expand,
+.b-window.gray > .header > .b-restore,
+.b-window.gray > .header > .b-restyle,
+.b-window.gray > .header > .b-save,
+.b-window.gray > .footer,
+.b-window.gray > .body.color{
+	color:#222;
+	background-color:#666;
+}
+
+.b-lightbox.warning,
+.b-window > .header.warning,
+.b-window > .header > .b-close.warning,
+.b-window > .header > .b-refresh.warning,
+.b-window > .header > .b-restruct.warning,
+.b-window > .header > .b-reload.warning,
+.b-window > .header > .b-refresh.warning,
+.b-window > .header > .b-compress.warning,
+.b-window > .header > .b-expand.warning,
+.b-window > .header > .b-restore.warning,
+.b-window > .header > .b-restyle.warning,
+.b-window > .header > .b-save.warning,
+.b-window > .footer.warning,
+.b-window > .body.warning,
+
+.b-window.warning > .header,
+.b-window.warning > .header > .b-close,
+.b-window.warning > .header > .b-refresh,
+.b-window.warning > .header > .b-restruct,
+.b-window.warning > .header > .b-reload,
+.b-window.warning > .header > .b-refresh,
+.b-window.warning > .header > .b-compress,
+.b-window.warning > .header > .b-expand,
+.b-window.warning > .header > .b-restore,
+.b-window.warning > .header > .b-restyle,
+.b-window.warning > .header > .b-save,
+.b-window.warning > .footer,
+.b-window.warning > .body.color{
+	background-color:rgb(255,74,0);	
+	background-color:rgba(255,74,0,0.4);
+	color: rgb(40,20,0);	
+}
+.b-window > .body.warning,
+.b-window.warning > .body.color,
+.b-window.warning > .body.error{
+	background:url("../img/bg-content.jpg") repeat;
+	color:white;
+}
+.b-lightbox.info,
+.b-window > .header.info,
+.b-window > .header > .b-close.info,
+.b-window > .header > .b-refresh.info,
+.b-window > .header > .b-restruct.info,
+.b-window > .header > .b-reload.info,
+.b-window > .header > .b-refresh.info,
+.b-window > .header > .b-compress.info,
+.b-window > .header > .b-expand.info,
+.b-window > .header > .b-restore.info,
+.b-window > .header > .b-restyle.info,
+.b-window > .header > .b-save.info,
+.b-window > .footer.info,
+.b-window > .body.info,
+
+.b-window.info > .header,
+.b-window.info > .header > .b-close,
+.b-window.info > .header > .b-refresh,
+.b-window.info > .header > .b-restruct,
+.b-window.info > .header > .b-reload,
+.b-window.info > .header > .b-refresh,
+.b-window.info > .header > .b-compress,
+.b-window.info > .header > .b-expand,
+.b-window.info > .header > .b-restore,
+.b-window.info > .header > .b-restyle,
+.b-window.info > .header > .b-save,
+.b-window.info > .footer,
+.b-window.info > .body.color{
+	background-color:rgb(25,125,255);
+	background-color:rgba(25,125,255,0.4);
+	color: #00244A;	
+}
+.b-window > .body.info,
+.b-window.info > .body.color,
+.b-window.info > .body.info{
+	background:url("../img/bg-content.jpg") repeat;
+	color:white;
+}
+
+.b-lightbox.white,
+.b-window > .header.white,
+.b-window > .header > .b-close.white,
+.b-window > .header > .b-refresh.white,
+.b-window > .header > .b-restruct.white,
+.b-window > .header > .b-reload.white,
+.b-window > .header > .b-refresh.white,
+.b-window > .header > .b-compress.white,
+.b-window > .header > .b-expand.white,
+.b-window > .header > .b-restore.white,
+.b-window > .header > .b-restyle.white,
+.b-window > .header > .b-save.white,
+.b-window > .footer.white,
+.b-window > .body.white,
+
+.b-window.white > .header,
+.b-window.white > .header > .b-close,
+.b-window.white > .header > .b-refresh,
+.b-window.white > .header > .b-restruct,
+.b-window.white > .header > .b-reload,
+.b-window.white > .header > .b-refresh,
+.b-window.white > .header > .b-compress,
+.b-window.white > .header > .b-expand,
+.b-window.white > .header > .b-restore,
+.b-window.white > .header > .b-restyle,
+.b-window.white > .header > .b-save,
+.b-window.white > .footer,
+.b-window.white > .body.color{
+	background-color: rgb(255,255,255);
+    color: #333;  	
+}
+
+.b-lightbox.alphablack,
+.b-window > .header.alphablack,
+.b-window > .header > .b-close.alphablack,
+.b-window > .header > .b-refresh.alphablack,
+.b-window > .header > .b-restruct.alphablack,
+.b-window > .header > .b-reload.alphablack,
+.b-window > .header > .b-refresh.alphablack,
+.b-window > .header > .b-compress.alphablack,
+.b-window > .header > .b-expand.alphablack,
+.b-window > .header > .b-restore.alphablack,
+.b-window > .header > .b-restyle.alphablack,
+.b-window > .header > .b-save.alphablack,
+.b-window > .footer.alphablack,
+.b-window > .body.alphablack,
+
+.b-window.alphablack > .header,
+.b-window.alphablack > .header > .b-close,
+.b-window.alphablack > .header > .b-refresh,
+.b-window.alphablack > .header > .b-restruct,
+.b-window.alphablack > .header > .b-reload,
+.b-window.alphablack > .header > .b-refresh,
+.b-window.alphablack > .header > .b-compress,
+.b-window.alphablack > .header > .b-expand,
+.b-window.alphablack > .header > .b-restore,
+.b-window.alphablack > .header > .b-restyle,
+.b-window.alphablack > .header > .b-save,
+.b-window.alphablack > .footer,
+.b-window.alphablack > .body.color{
+	background-color:black;	
+	background-color:rgba(0,0,0,0.7);
+    color: #333;
+	
+	-webkit-text-shadow: 0 1px 0 rgba(200, 200, 200, 0.15);
+	-khtml-text-shadow: 0 1px 0 rgba(200, 200, 200, 0.15);
+	-moz-text-shadow: 0 1px 0 rgba(200, 200, 200, 0.15);
+	-ms-text-shadow: 0 1px 0 rgba(200, 200, 200, 0.15);
+	-o-text-shadow: 0 1px 0 rgba(200, 200, 200, 0.15);
+	text-shadow: 0 1px 0 rgba(200, 200, 200, 0.15);
+}
+
+/**
+*	B-INPUT
+*/
+.b-input{
+	border: 1px solid rgb(30, 30, 30);
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	padding: 5px;
+	
+	-webkit-transition: all 0.5s ease;
+	-khtml-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-text-shadow: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;	
+	
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-khtml-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-ms-border-radius: 4px 4px 4px 4px;
+	-o-border-radius: 4px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
+		
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	
+	-webkit-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-khtml-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-moz-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-ms-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-o-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	
+	background-image: -moz-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -webkit-gradient(linear, top, color-stop(0%,rgba(0, 0, 0, 0.08)), color-stop(100%,rgba(0, 0, 0, 0.2))); 
+	background-image: -webkit-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -o-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -ms-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -khtml-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+}
+input.b-input{
+	vertical-align: middle;
+	height: 32px;
+}
+textarea.b-input{
+	height:64px;
+}
+.b-label{
+	-webkit-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-khtml-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-moz-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-ms-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-o-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+select.b-input option{
+	background:#111;
+
+	-webkit-transition: all 0.5s ease;
+	 -khtml-transition: all 0.5s ease;
+	   -moz-transition: all 0.5s ease;
+	   -ms-text-shadow: all 0.5s ease;
+	     -o-transition: all 0.5s ease;
+	        transition: all 0.5s ease;	
+}
+
+/**
+*	B-INPUT	::	STYLE
+*/
+.b-input,
+.b-input.black{
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #999999;
+}
+.b-input.red{
+	background: rgb(255, 0, 0);
+	background-color: rgba(255, 0, 0, 0.1);
+}
+.b-input.green{
+	background: rgb(0, 255, 0);
+	background-color: rgba(0, 155, 0, 0.1);
+}
+.b-label,
+.b-label.gray{
+	color: #999999;
+}
+
+/**
+*	B-INPUT	::	SIZE
+*/
+.b-input.xs{
+	width:30%;
+}
+.b-input.s{
+	font-size: 11px;
+	padding: 4px 8px;
+	width:40%;
+}
+.b-input.l{
+	font-size: 16px;
+	padding: 12px 26px;
+	width:80%;
+}
+.b-input.xl{
+	font-size: 18px;
+    padding: 16px 30px;
+	width:100%;
+}
+
+/**
+*	B-INPUT	::	PLACEHOLDER
+*/
+::-webkit-input-placeholder{
+	font-style:italic !important;
+   	font-size:0.8em !important;
+	line-height:18px;
+	opacity:0.5;
+}
+:-moz-placeholder{
+	font-style:italic !important;
+   	font-size:0.8em !important;
+	line-height:18px;
+	opacity:0.5;
+}
+.b-input::-moz-placeholder{
+  	font-style:italic !important;
+   	font-size:0.8em !important;
+	line-height:18px;
+	opacity:0.5;
+}
+:-ms-input-placeholder{  
+   	font-style:italic !important;
+   	font-size:0.8em !important;
+	line-height:18px;
+	opacity:0.5;
+}
+
+/**
+*	B-INPUT	::	STATEMENT
+*/
+.b-input[disabled="disabled"]{
+	color:#666;
+}
+.b-input:focus{
+	border:none;
+	
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+}
+.b-input.resize-none{
+	resize:none;
+}
+.b-input.resize-x{
+	resize:horizontal;
+}
+.b-input.resize-y{
+	resize:vertical;
+}
+
+/**
+*	B-INPUT	::	ASSOC
+*/
+.b-group{
+	width:auto;
+	background:none;
+	border:none;
+}
+.b-group > .b-input{
+	border-radius:4px 0px 0px 4px;
+}
+.b-group .b-btn{
+	border-radius:0;
+}
+.b-group .input-group-btn:last-child .b-btn{
+	border-radius:0px 5px 5px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+*	B-FILES
+*/
+.b-files .thumbszone,
+.b-files > .dropzone{
+	border: 1px solid rgb(30, 30, 30);
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	padding: 5px;
+	margin:auto;
+	color: #999999;
+	margin-bottom:10px;
+	
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.5);
+	
+	-webkit-transition:all 0.5s ease;
+	 -khtml-transition:all 0.5s ease;
+	   -moz-transition:all 0.5s ease;
+	   -ms-text-shadow:all 0.5s ease;
+	     -o-transition:all 0.5s ease;
+	        transition:all 0.5s ease;	
+	
+	-webkit-border-radius:4px;
+	 -khtml-border-radius:4px;
+	   -moz-border-radius:4px;
+	    -ms-border-radius:4px;
+	     -o-border-radius:4px;
+	        border-radius:4px;
+		
+	-webkit-box-shadow:0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	 -khtml-box-shadow:0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	   -moz-box-shadow:0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	    -ms-box-shadow:0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	     -o-box-shadow:0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	        box-shadow:0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	
+	-webkit-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	 -khtml-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+ 	   -moz-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	    -ms-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	     -o-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	
+	background-image: -moz-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -webkit-gradient(linear, top, color-stop(0%,rgba(0, 0, 0, 0.08)), color-stop(100%,rgba(0, 0, 0, 0.2))); 
+	background-image: -webkit-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -o-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -ms-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -khtml-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+}
+.b-files > .dropzone > p{
+	text-align:center;
+	line-height:100px;
+	font-size:large;
+	opacity: 0.2;
+	cursor:default;
+}
+.b-files .dropzone{
+	height:85%;
+}
+.b-files > .dropzone.dragover{
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+}
+.b-files > .dropzone.dragover > p{
+	display:none;
+}
+.b-files > .dropzone.black{
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #999999;
+}
+.b-files > .dropzone.green{
+	background: rgb(0, 255, 0);
+	background-color: rgba(0, 155, 0, 0.1);
+}
+.b-files > .dropzone.red{
+	background: rgb(255, 0, 0);
+	background-color: rgba(255, 0, 0, 0.1);
+}
+
+.b-files .thumbszone{
+	height:80%;
+	max-height:600px;
+	overflow:hidden;
+}
+.b-files .thumbszone .thumbnail{
+    display:inline-block;
+    cursor:pointer;
+    width:155px;
+    margin:5px;
+    text-align:center;
+    border:none;
+    
+    background:#111 url("../img/bg.png") repeat-x;
+    
+    -webkit-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+     -khtml-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	   -moz-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	    -ms-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	     -o-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	        box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	
+	-webkit-border-radius:4px 4px 4px 4px;
+	 -khtml-border-radius:4px 4px 4px 4px;
+	   -moz-border-radius:4px 4px 4px 4px;
+	    -ms-border-radius:4px 4px 4px 4px;
+	     -o-border-radius:4px 4px 4px 4px;
+	        border-radius:4px 4px 4px 4px;
+		
+	-webkit-text-shadow:0 1px 0 rgba(255, 255, 255, 0.15);
+	 -khtml-text-shadow:0 1px 0 rgba(255, 255, 255, 0.15);
+	   -moz-text-shadow:0 1px 0 rgba(255, 255, 255, 0.15);
+	    -ms-text-shadow:0 1px 0 rgba(255, 255, 255, 0.15);
+	     -o-text-shadow:0 1px 0 rgba(255, 255, 255, 0.15);
+	        text-shadow:0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.b-files .thumbszone .thumbnail .figure{
+    height:150px;
+    text-align:center;
+    margin:auto;
+    margin:5px;
+    
+    -webkit-border-radius:4px 4px 4px 4px;
+	 -khtml-border-radius:4px 4px 4px 4px;
+	   -moz-border-radius:4px 4px 4px 4px;
+	    -ms-border-radius:4px 4px 4px 4px;
+	     -o-border-radius:4px 4px 4px 4px;
+	        border-radius:4px 4px 4px 4px;
+}
+.b-files .thumbszone .thumbnail .figure > *{
+    display:block;
+    max-width:100%;
+    max-height:100%;
+    margin:auto;
+    line-height:100%;
+    
+    -webkit-border-radius:4px 4px 4px 4px;
+     -khtml-border-radius:4px 4px 4px 4px;
+	   -moz-border-radius:4px 4px 4px 4px;
+	    -ms-border-radius:4px 4px 4px 4px;
+	     -o-border-radius:4px 4px 4px 4px;
+	        border-radius:4px 4px 4px 4px;
+            
+    -webkit-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	 -khtml-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	   -moz-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	    -ms-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	     -o-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	        box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+.b-files .thumbszone .thumbnail .b-group > *{
+    float:none;
+}
+.b-files > .b-btn{
+	display:block;
+	padding:20px;
+	margin:auto;
+}
+.b-files-show{
+    -webkit-border-radius:4px;
+     -khtml-border-radius:4px;
+	   -moz-border-radius:4px;
+	    -ms-border-radius:4px;
+	     -o-border-radius:4px;
+	        border-radius:4px;
+            
+    -webkit-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	 -khtml-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	   -moz-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	    -ms-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	     -o-box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	        box-shadow:0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+
+/**
+*	B-SWITCH
+*/
+.b-switch{
+	border: 1px solid rgb(30, 30, 30);
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	padding: 1px;
+	width:84px;
+	
+	-webkit-transition: all 0.5s ease;
+	-khtml-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-text-shadow: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;	
+	
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-khtml-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-ms-border-radius: 4px 4px 4px 4px;
+	-o-border-radius: 4px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
+		
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	
+	-webkit-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-khtml-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-moz-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-ms-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-o-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	
+	background-image: -moz-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -webkit-gradient(linear, top, color-stop(0%,rgba(0, 0, 0, 0.08)), color-stop(100%,rgba(0, 0, 0, 0.2))); 
+	background-image: -webkit-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -o-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -ms-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -khtml-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	
+	background-color:rgba(0,0,0,0.3);
+}
+.b-switch > *{
+	width:40px;
+}
+.b-switch > button.switch{
+
+}
+
+.b-switch:fist-child{
+	border-radius : 5px 0 0 5px!important;
+}
+
+
+/**
+*	B-CHECKBOX
+*/
+.b-checkbox{
+	display:inline-block;
+	width:25px;
+	height:25px; 
+	overflow:hidden;
+	
+	-webkit-transition: all 0.5s ease;
+	-khtml-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-text-shadow: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;	
+	
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+		
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), 0 -1px 1px rgba(255, 255, 255, 0.04);
+	
+	-webkit-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-khtml-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-moz-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-ms-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	-o-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	
+	background-image: -moz-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -webkit-gradient(linear, top, color-stop(0%,rgba(0, 0, 0, 0.08)), color-stop(100%,rgba(0, 0, 0, 0.2))); 
+	background-image: -webkit-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -o-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -ms-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: -khtml-linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	background-image: linear-gradient(top , rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+	
+	background-color:rgba(0,0,0,0.3);
+}
+.b-checkbox > .mask{
+	width:52px;
+	height:25px;
+}
+.b-checkbox > .mask > *{
+	float:left;
+	width:26px;
+	height:25px;
+}
+
+
+/**
+*	B-PROGRESS
+*/
+.b-progress{	
+	height:22px;
+	padding:1px;
+	width:100%;
+	border:1px inset rgba(255,255,255,0.1);
+	background:rgba(0,0,0,0.5);
+		
+	-webkit-border-radius:4px;
+	 -khtml-border-radius:4px;
+	   -moz-border-radius:4px;
+	    -ms-border-radius:4px;
+	     -o-border-radius:4px;
+	        border-radius:4px;
+
+	-webkit-text-shadow:0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	 -khtml-text-shadow:0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	   -moz-text-shadow:0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	    -ms-text-shadow:0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	     -o-text-shadow:0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+	        text-shadow:0 1px 0 rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(255, 255, 255, 0.04), 0 1px 0 rgba(0, 0, 0, 0.8);
+}
+.b-progress > .b-progressbar{
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-khtml-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-ms-border-radius: 4px 4px 4px 4px;
+	-o-border-radius: 4px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
+	
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	-khtml-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	-ms-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	-o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.16) inset, 0 1px 1px rgba(0, 0, 0, 0.4);
+	
+	-webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	-khtml-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	-moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	-ms-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	-o-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);	
+	
+	height:18px;
+	text-align:center;
+	vertical-align: middle;
+	font-weight:bold;
+	border: medium none;
+	width:0;
+}
+.b-progress > .b-progressbar.animate {
+	-webkit-animation:fade 2s ease-out infinite alternate;
+	 -khtml-animation:fade 2s ease-out infinite alternate;
+	   -moz-animation:fade 2s ease-out infinite alternate;
+	    -ms-animation:fade 2s ease-out infinite alternate;
+	     -o-animation:fade 2s ease-out infinite alternate;
+	        animation:fade 2s ease-out infinite alternate;
+}
+.b-progress > .b-progressbar.multicolor{
+	color:black;
+    background-image:-webkit-linear-gradient(to right, #d8225e, #b73794, #7254b6, #3981d1, #3bbfee); 
+	background-image:-khtml-linear-gradient(to right, #d8225e, #b73794, #7254b6, #3981d1, #3bbfee); 
+	background-image:-moz-linear-gradient(to right, #d8225e, #b73794, #7254b6, #3981d1, #3bbfee); 
+	background-image:-ms-linear-gradient(to right, #d8225e, #b73794, #7254b6, #3981d1, #3bbfee); 
+	background-image:-o-linear-gradient(to right, #d8225e, #b73794, #7254b6, #3981d1, #3bbfee); 
+	background-image:linear-gradient(to right, #d8225e, #b73794, #7254b6, #3981d1, #3bbfee); 
+}
+.b-progress > .b-progressbar.alphagray{
+	background-color: rgb(150, 150, 150);
+	background-color: rgba(255, 255, 255, 0.3);
+    color: #222222;  
+}
+.b-progress > .b-progressbar.alphablue{
+	background-color: rgb(25, 125, 255);
+	background-color:rgba(25, 125, 255, 0.4);
+	color: #00244A;
+}
+.b-progress > .b-progressbar.alphared{
+	background: rgb(255, 0, 0);
+	background-color: rgba(255, 0, 0, 0.4);
+	color: #3D0800;
+}
+.b-progress > .b-progressbar.alphagreen{
+	background: rgb(0, 255, 0);
+	background-color: rgba(0, 155, 0, 0.4);
+	color: #1E2600;
+}
